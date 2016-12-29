@@ -1,0 +1,84 @@
+
+#Example of a string being assigned to a variable
+myMath = "Look at what Python can do with math"
+
+print myMath
+print "--" * 18
+
+print "\nHere are {0} math examples:".format(6)
+
+# Example of addition 
+print ("\n10 + 4 = "), 10 + 4
+
+#Example of subtraction
+print ("9.8 - 2.4 = "), 9.8 - 2.4
+
+#Example of multiplication
+print ("30 * 12 = "), 30 * 12
+
+#Example of a float being assigned to a variable and division
+floatExample = 34/23.0
+print ("34 / 23 = "), floatExample
+
+#Example of modulus in use
+print ("6 % 4 = "), 6 % 4
+
+#Example of iteration
+print "\nExample of iteration, where x = 1 and is added upon itself: "
+x = 1
+while x < 10:
+    x +=x
+    print x
+
+# Python can make lists! And Tuples! And use for loops!
+print "\nPython can iterate through lists and tuples!"
+print "--" * 22
+
+# list example
+party_attendees = ['Zac', 'Tim', 'Jess', 'Erin']
+for attendee in party_attendees:
+    print "\nWelcome to the party: ", attendee
+
+print "Enjoy!"
+
+# tuple example
+food = ('pizza', 'salad', 'burgers')
+print("\nThe most popular food avalable is: " + food[0])
+
+print("All available foods are:")
+for foods in food:
+    print("\n- " + foods)
+
+# Showing an if/elif/else statement, logic operators,
+# utilizing user input, and defining/calling functions
+
+def no_driving():
+    print ('''\nYou deserve to not have to drive, take a break, enjoy the ride.''')
+
+def under_15():
+    print ("\nYou are not old enough to drive")
+
+def under_21():
+    print ('''\nYou are old enough to drive.
+            \nYou are not old enough to drink yet.''')
+def over_21():
+    print ('''\nYou are old enough to drink. You are old enough to drive.
+        \nDon't drink and drive.''')
+
+print "\nPython can also work with user input:"
+print "--" * 18
+
+userAge = int((raw_input("Enter your age: ")))
+print "You are: ", userAge
+
+if ((userAge >= 120) or (userAge <=0)) :
+    no_driving()
+
+elif not userAge >= 16 :
+    under_15()
+
+elif ((userAge >= 16) and (userAge <= 20)):
+    under_21()
+
+else:
+    over_21()
