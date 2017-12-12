@@ -1,0 +1,11 @@
+def manual_sort(list):
+    for numbers in range(1,len(list)):
+        value = list[numbers]
+        n = numbers - 1
+        while n>=0:
+            if value < list[n]:
+                list[n+1] = list[n]
+                list[n] = value
+                n = n - 1
+            else:
+                break
