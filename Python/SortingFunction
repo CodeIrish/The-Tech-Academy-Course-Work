@@ -1,11 +1,20 @@
 def manual_sort(list):
-    for numbers in range(1,len(list)): # not starting at the beginning of the list, because there's no point starting at the 0 slot
+    for numbers in range(1,len(list)):
         value = list[numbers]
         n = numbers - 1
         while n>=0:
             if value < list[n]:
-                list[n+1] = list[n] 
+                list[n+1] = list[n]
                 list[n] = value
                 n = n - 1
             else:
                 break
+
+toSort = [67, 45, 2, 13, 1, 998]
+toSort2 = [89, 23, 33, 45, 10, 12, 45, 45, 45]
+
+manual_sort(toSort)
+manual_sort(toSort2)
+
+print("[67, 45, 2, 13, 1, 998] sorted is: ", toSort)
+print("[89, 23, 33, 45, 10, 12, 45, 45, 45] sorted is: ", toSort2)
