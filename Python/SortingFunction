@@ -1,11 +1,11 @@
-def manual_sort(list):
-    for numbers in range(1,len(list)):
-        value = list[numbers]
-        n = numbers - 1
-        while n>=0:
-            if value < list[n]:
-                list[n+1] = list[n]
-                list[n] = value
+def manual_sort(alist):
+    for numbers in range(1,len(alist)):
+        value = alist[numbers] #value is the item in the list that we are comparing to the items to the left of that number slot
+        n = numbers - 1 # number is -1 because it will denote one less than/to the left of
+        while n>=0: # no need to go further than 0, 0 is the start of the list
+            if value < alist[n]:
+                alist[n+1] = alist[n] #this allows us to compare the next number in the list via n + 1 
+                alist[n] = value # while this is shifting the value left into slot n
                 n = n - 1
             else:
                 break
@@ -18,3 +18,6 @@ manual_sort(toSort2)
 
 print("[67, 45, 2, 13, 1, 998] sorted is: ", toSort)
 print("[89, 23, 33, 45, 10, 12, 45, 45, 45] sorted is: ", toSort2)
+
+
+
